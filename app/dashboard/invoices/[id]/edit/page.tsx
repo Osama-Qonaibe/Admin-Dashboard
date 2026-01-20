@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Edit Invoice',
 }
 
+// Force dynamic rendering to prevent build-time database errors
+export const dynamic = 'force-dynamic'
+
 export default async function Page({ params }: { params: { id: string } }) {
   const id = params.id
   const [invoice, customers] = await Promise.all([
