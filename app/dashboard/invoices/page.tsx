@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: 'Invoices',
 }
 
+// Force dynamic rendering to prevent build-time database errors
+export const dynamic = 'force-dynamic'
+
 export default async function Page({
   searchParams,
 }: {
